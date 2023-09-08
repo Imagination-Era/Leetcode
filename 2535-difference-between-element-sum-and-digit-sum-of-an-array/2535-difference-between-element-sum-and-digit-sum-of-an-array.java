@@ -5,11 +5,11 @@ class Solution {
         for(int i=0;i<nums.length;i++){
             es+=nums[i];
              
-            int v=nums[i];
+            // int v=nums[i];
            
-             while(v>0){
-                 ds+=v%10;
-                 v=v/10;
+             while(nums[i]>0){
+                 ds+=nums[i]%10;
+                 nums[i]=nums[i]/10;
              }
         }
         return Math.abs(ds-es);
